@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC2D54391E52ADA50033E722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54381E52ADA50033E722 /* AppDelegate.swift */; };
+		EC2D543B1E52ADA50033E722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D543A1E52ADA50033E722 /* ViewController.swift */; };
+		EC2D543E1E52ADA50033E722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2D543C1E52ADA50033E722 /* Main.storyboard */; };
+		EC2D54401E52ADA50033E722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2D543F1E52ADA50033E722 /* Assets.xcassets */; };
+		EC2D54431E52ADA50033E722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2D54411E52ADA50033E722 /* LaunchScreen.storyboard */; };
+		EC2D544E1E52ADA50033E722 /* MockAlamofireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D544D1E52ADA50033E722 /* MockAlamofireTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC2D544A1E52ADA50033E722 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC2D542D1E52ADA50033E722 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC2D54341E52ADA50033E722;
+			remoteInfo = MockAlamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC2D54351E52ADA50033E722 /* MockAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2D54381E52ADA50033E722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC2D543A1E52ADA50033E722 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC2D543D1E52ADA50033E722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC2D543F1E52ADA50033E722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC2D54421E52ADA50033E722 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC2D54441E52ADA50033E722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2D54491E52ADA50033E722 /* MockAlamofireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockAlamofireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2D544D1E52ADA50033E722 /* MockAlamofireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlamofireTests.swift; sourceTree = "<group>"; };
+		EC2D544F1E52ADA50033E722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC2D54321E52ADA50033E722 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2D54461E52ADA50033E722 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2D542C1E52ADA50033E722 = {
+			isa = PBXGroup;
+			children = (
+				EC2D54371E52ADA50033E722 /* MockAlamofire */,
+				EC2D544C1E52ADA50033E722 /* MockAlamofireTests */,
+				EC2D54361E52ADA50033E722 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC2D54361E52ADA50033E722 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D54351E52ADA50033E722 /* MockAlamofire.app */,
+				EC2D54491E52ADA50033E722 /* MockAlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC2D54371E52ADA50033E722 /* MockAlamofire */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D54381E52ADA50033E722 /* AppDelegate.swift */,
+				EC2D543A1E52ADA50033E722 /* ViewController.swift */,
+				EC2D543C1E52ADA50033E722 /* Main.storyboard */,
+				EC2D543F1E52ADA50033E722 /* Assets.xcassets */,
+				EC2D54411E52ADA50033E722 /* LaunchScreen.storyboard */,
+				EC2D54441E52ADA50033E722 /* Info.plist */,
+			);
+			path = MockAlamofire;
+			sourceTree = "<group>";
+		};
+		EC2D544C1E52ADA50033E722 /* MockAlamofireTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D544D1E52ADA50033E722 /* MockAlamofireTests.swift */,
+				EC2D544F1E52ADA50033E722 /* Info.plist */,
+			);
+			path = MockAlamofireTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC2D54341E52ADA50033E722 /* MockAlamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2D54521E52ADA50033E722 /* Build configuration list for PBXNativeTarget "MockAlamofire" */;
+			buildPhases = (
+				EC2D54311E52ADA50033E722 /* Sources */,
+				EC2D54321E52ADA50033E722 /* Frameworks */,
+				EC2D54331E52ADA50033E722 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MockAlamofire;
+			productName = MockAlamofire;
+			productReference = EC2D54351E52ADA50033E722 /* MockAlamofire.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC2D54481E52ADA50033E722 /* MockAlamofireTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2D54551E52ADA50033E722 /* Build configuration list for PBXNativeTarget "MockAlamofireTests" */;
+			buildPhases = (
+				EC2D54451E52ADA50033E722 /* Sources */,
+				EC2D54461E52ADA50033E722 /* Frameworks */,
+				EC2D54471E52ADA50033E722 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC2D544B1E52ADA50033E722 /* PBXTargetDependency */,
+			);
+			name = MockAlamofireTests;
+			productName = MockAlamofireTests;
+			productReference = EC2D54491E52ADA50033E722 /* MockAlamofireTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC2D542D1E52ADA50033E722 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Velaru;
+				TargetAttributes = {
+					EC2D54341E52ADA50033E722 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3B6HCC9SG8;
+						ProvisioningStyle = Automatic;
+					};
+					EC2D54481E52ADA50033E722 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3B6HCC9SG8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC2D54341E52ADA50033E722;
+					};
+				};
+			};
+			buildConfigurationList = EC2D54301E52ADA50033E722 /* Build configuration list for PBXProject "MockAlamofire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC2D542C1E52ADA50033E722;
+			productRefGroup = EC2D54361E52ADA50033E722 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC2D54341E52ADA50033E722 /* MockAlamofire */,
+				EC2D54481E52ADA50033E722 /* MockAlamofireTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC2D54331E52ADA50033E722 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2D54431E52ADA50033E722 /* LaunchScreen.storyboard in Resources */,
+				EC2D54401E52ADA50033E722 /* Assets.xcassets in Resources */,
+				EC2D543E1E52ADA50033E722 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2D54471E52ADA50033E722 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC2D54311E52ADA50033E722 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2D543B1E52ADA50033E722 /* ViewController.swift in Sources */,
+				EC2D54391E52ADA50033E722 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC2D54451E52ADA50033E722 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2D544E1E52ADA50033E722 /* MockAlamofireTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC2D544B1E52ADA50033E722 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC2D54341E52ADA50033E722 /* MockAlamofire */;
+			targetProxy = EC2D544A1E52ADA50033E722 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC2D543C1E52ADA50033E722 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2D543D1E52ADA50033E722 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC2D54411E52ADA50033E722 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2D54421E52ADA50033E722 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC2D54501E52ADA50033E722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC2D54511E52ADA50033E722 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC2D54531E52ADA50033E722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3B6HCC9SG8;
+				INFOPLIST_FILE = MockAlamofire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.velaru.MockAF.MockAlamofire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EC2D54541E52ADA50033E722 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3B6HCC9SG8;
+				INFOPLIST_FILE = MockAlamofire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.velaru.MockAF.MockAlamofire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EC2D54561E52ADA50033E722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3B6HCC9SG8;
+				INFOPLIST_FILE = MockAlamofireTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.velaru.MockAF.MockAlamofireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MockAlamofire.app/MockAlamofire";
+			};
+			name = Debug;
+		};
+		EC2D54571E52ADA50033E722 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3B6HCC9SG8;
+				INFOPLIST_FILE = MockAlamofireTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.velaru.MockAF.MockAlamofireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MockAlamofire.app/MockAlamofire";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC2D54301E52ADA50033E722 /* Build configuration list for PBXProject "MockAlamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2D54501E52ADA50033E722 /* Debug */,
+				EC2D54511E52ADA50033E722 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2D54521E52ADA50033E722 /* Build configuration list for PBXNativeTarget "MockAlamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2D54531E52ADA50033E722 /* Debug */,
+				EC2D54541E52ADA50033E722 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC2D54551E52ADA50033E722 /* Build configuration list for PBXNativeTarget "MockAlamofireTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2D54561E52ADA50033E722 /* Debug */,
+				EC2D54571E52ADA50033E722 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC2D542D1E52ADA50033E722 /* Project object */;
+}
