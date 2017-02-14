@@ -14,6 +14,13 @@
 		EC2D54401E52ADA50033E722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2D543F1E52ADA50033E722 /* Assets.xcassets */; };
 		EC2D54431E52ADA50033E722 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2D54411E52ADA50033E722 /* LaunchScreen.storyboard */; };
 		EC2D544E1E52ADA50033E722 /* MockAlamofireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D544D1E52ADA50033E722 /* MockAlamofireTests.swift */; };
+		EC2D545D1E52AEF80033E722 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2D545C1E52AEF80033E722 /* Alamofire.framework */; };
+		EC2D545E1E52AF090033E722 /* MockingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54591E52AEA80033E722 /* MockingProtocol.swift */; };
+		EC2D545F1E52AF0A0033E722 /* MockingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54591E52AEA80033E722 /* MockingProtocol.swift */; };
+		EC2D54611E52AFAD0033E722 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54601E52AFAD0033E722 /* Mocks.swift */; };
+		EC2D54621E52AFAD0033E722 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54601E52AFAD0033E722 /* Mocks.swift */; };
+		EC2D54641E52AFFC0033E722 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54631E52AFFC0033E722 /* RequestManager.swift */; };
+		EC2D54651E52AFFC0033E722 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D54631E52AFFC0033E722 /* RequestManager.swift */; };
 		EEE9CBEEB1774424F17D6E02 /* Pods_MockAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002A2585DB8978E75C8029DC /* Pods_MockAlamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +51,10 @@
 		EC2D54491E52ADA50033E722 /* MockAlamofireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockAlamofireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2D544D1E52ADA50033E722 /* MockAlamofireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlamofireTests.swift; sourceTree = "<group>"; };
 		EC2D544F1E52ADA50033E722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2D54591E52AEA80033E722 /* MockingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockingProtocol.swift; sourceTree = "<group>"; };
+		EC2D545C1E52AEF80033E722 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/MockAlamofire-cfyxwldwpmqidmcumoforcqdxmsy/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		EC2D54601E52AFAD0033E722 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		EC2D54631E52AFFC0033E722 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2D545D1E52AEF80033E722 /* Alamofire.framework in Frameworks */,
 				EEE9CBEEB1774424F17D6E02 /* Pods_MockAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +112,9 @@
 		EC2D54371E52ADA50033E722 /* MockAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				EC2D54581E52AE4B0033E722 /* Mocks */,
 				EC2D54381E52ADA50033E722 /* AppDelegate.swift */,
+				EC2D54631E52AFFC0033E722 /* RequestManager.swift */,
 				EC2D543A1E52ADA50033E722 /* ViewController.swift */,
 				EC2D543C1E52ADA50033E722 /* Main.storyboard */,
 				EC2D543F1E52ADA50033E722 /* Assets.xcassets */,
@@ -119,9 +133,19 @@
 			path = MockAlamofireTests;
 			sourceTree = "<group>";
 		};
+		EC2D54581E52AE4B0033E722 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D54591E52AEA80033E722 /* MockingProtocol.swift */,
+				EC2D54601E52AFAD0033E722 /* Mocks.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		F54BE696E0EB31C4A52F67FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC2D545C1E52AEF80033E722 /* Alamofire.framework */,
 				002A2585DB8978E75C8029DC /* Pods_MockAlamofire.framework */,
 				47762DB8BDCEF1735D554672 /* Pods_MockAlamofireTests.framework */,
 			);
@@ -332,8 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2D54641E52AFFC0033E722 /* RequestManager.swift in Sources */,
 				EC2D543B1E52ADA50033E722 /* ViewController.swift in Sources */,
+				EC2D545E1E52AF090033E722 /* MockingProtocol.swift in Sources */,
 				EC2D54391E52ADA50033E722 /* AppDelegate.swift in Sources */,
+				EC2D54611E52AFAD0033E722 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2D545F1E52AF0A0033E722 /* MockingProtocol.swift in Sources */,
 				EC2D544E1E52ADA50033E722 /* MockAlamofireTests.swift in Sources */,
+				EC2D54621E52AFAD0033E722 /* Mocks.swift in Sources */,
+				EC2D54651E52AFFC0033E722 /* RequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +575,7 @@
 				EC2D54541E52ADA50033E722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC2D54551E52ADA50033E722 /* Build configuration list for PBXNativeTarget "MockAlamofireTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +584,7 @@
 				EC2D54571E52ADA50033E722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
