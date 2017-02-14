@@ -10,27 +10,52 @@ import XCTest
 @testable import MockAlamofire
 
 class MockAlamofireTests: XCTestCase {
+   
+    var manager:RequestState = .Live
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLiveRequestState() {
+        let expect = expectation(description: "Get")
+        
+        manager.session.request("https://httpbin.org/get").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let val = value as AnyObject?
+                print("LIVE DATA", val as Any)
+            case .failure(let error):
+                print("Error: Handle failure", error)
+            }
+            expect.fulfill()
         }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
+    }
+   
+    func testMockRequest() {
+        
+        manager = .Mock
+        
+        let expect = expectation(description: "Get")
+        
+        manager.session.request("https://httpbin.org/todos").responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let val = value as AnyObject?
+                print("Mock DATA", val as Any)
+            case .failure(let error):
+                print("Error: Handle failure", error)
+            }
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0, handler: nil)
     }
     
 }
