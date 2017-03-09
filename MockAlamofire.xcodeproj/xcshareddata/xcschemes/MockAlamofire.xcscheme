@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF4BD08F40AABAB4461A296D40D3C516"
-               BuildableName = "Pods_MockAlamofire.framework"
-               BlueprintName = "Pods-MockAlamofire"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "EC2D54341E52ADA50033E722"
+               BuildableName = "MockAlamofire.app"
+               BlueprintName = "MockAlamofire"
+               ReferencedContainer = "container:MockAlamofire.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EC2D54481E52ADA50033E722"
+               BuildableName = "MockAlamofireTests.xctest"
+               BlueprintName = "MockAlamofireTests"
+               ReferencedContainer = "container:MockAlamofire.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EC2D54341E52ADA50033E722"
+            BuildableName = "MockAlamofire.app"
+            BlueprintName = "MockAlamofire"
+            ReferencedContainer = "container:MockAlamofire.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AF4BD08F40AABAB4461A296D40D3C516"
-            BuildableName = "Pods_MockAlamofire.framework"
-            BlueprintName = "Pods-MockAlamofire"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "EC2D54341E52ADA50033E722"
+            BuildableName = "MockAlamofire.app"
+            BlueprintName = "MockAlamofire"
+            ReferencedContainer = "container:MockAlamofire.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EC2D54341E52ADA50033E722"
+            BuildableName = "MockAlamofire.app"
+            BlueprintName = "MockAlamofire"
+            ReferencedContainer = "container:MockAlamofire.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

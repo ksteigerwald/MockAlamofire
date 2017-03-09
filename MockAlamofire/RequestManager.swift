@@ -10,37 +10,29 @@ import Foundation
 import Alamofire
 
 class RequestManager {
-    
     static let shared = RequestManager()
+    fileprivate let liveManager: SessionManager
+    fileprivate let mockManager: SessionManager
     
-    let liveManager:SessionManager?
-    let mockManager:SessionManager?
-    
-    init(_ state: RequestState = .Live) {
-        
+    init(_ state: RequestState = .live) {
         let configuration: URLSessionConfiguration = {
             let configuration = URLSessionConfiguration.default
             configuration.protocolClasses = [MockingURLProtocol.self]
             return configuration
         }()
-        
         self.liveManager = SessionManager.default
         self.mockManager = SessionManager(configuration: configuration)
     }
-    
 }
 
-let requestor = RequestManager.shared
-
 enum RequestState {
-    case Live
-    case Mock
+    case live
+    case mock
     
-    var session:SessionManager {
+    var session: SessionManager {
         switch self {
-        case .Live: return requestor.liveManager!
-        case .Mock: return requestor.mockManager!
+        case .live: return RequestManager.shared.liveManager
+        case .mock: return RequestManager.shared.mockManager
         }
     }
-    
 }

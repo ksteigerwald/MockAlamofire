@@ -8,52 +8,45 @@
 
 import Foundation
 
-enum MockDirection {
-    case GET, PUT, POST
+enum MockDirection: String {
+    case get = "GET", put = "PUT", post = "POST"
     
-    init(str: String) {
-        switch str {
-        case "GET":
-            self = .GET
-        case "PUT":
-            self = .PUT
-        case "POST":
-            self = .POST
-        default:
-            self = .GET
-        }
-    }
-    
-    func isNotToken(_ item: String) -> Bool {
+    private func isToken(_ item: String) -> Bool {
         let num = Int(item)
-        return num == nil
+        return num != nil
     }
     
-    func kind(_ tokens: Array<String> = []) ->  [String] {
+    fileprivate func kind(_ tokens: [String] = []) ->  [String] {
+        guard
+            let lastToken = tokens.last,
+            let firstToken = tokens.first,
+            let lastAction = output.last,
+            let firstAction = output.first
+            else { return [] }
         
-        if(isNotToken(tokens.last!) && self == .GET) {
-            //Is a index actionk
-            return [tokens.last!, self.output.last!]
+        //Process Index Action
+        if(!isToken(lastToken) && self == .get) {
+            return [lastToken, lastAction]
         }
         
-        if(!isNotToken(tokens.last!) && self == .GET) {
-            //Is a show action
-            return [tokens.first!, self.output.first!]
+        //Process Show Action
+        if(isToken(lastToken) && self == .get) {
+            return [firstToken, firstAction]
         }
         
-        if(isNotToken(tokens.last!) && self == .POST) {
-            //Is a create action
-            return [tokens.last!, self.output.first!]
+        //Process Create Action
+        if(!isToken(lastToken) && self == .post) {
+            return [lastToken, firstAction]
         }
         
-        return [tokens.first!, output.last!]
+        return [firstToken, lastAction]
     }
     
-    var output:Array<String> {
+    private var output: [String] {
         switch self {
-        case .GET: return ["SHOW", "INDEX"]
-        case .PUT: return ["UPDATE"]
-        case .POST: return ["CREATE"]
+        case .get: return ["SHOW", "INDEX"]
+        case .put: return ["UPDATE"]
+        case .post: return ["CREATE"]
         }
     }
     
@@ -61,8 +54,7 @@ enum MockDirection {
 }
 
 struct Mocks {
-    
-    var mocks: Dictionary = [
+    private static var mocks = [
         "todos": [
             "INDEX": "[{ \"userId\": 1, \"id\": 1, \"title\": \"delectus aut autem\", \"completed\": false }, { \"userId\": 1, \"id\": 2, \"title\": \"quis ut nam facilis et officia qui\", \"completed\": false }]",
             "SHOW": "{ \"userId\": 1, \"id\": 1, \"title\": \"delectus aut autem\", \"completed\": false }"
@@ -70,40 +62,28 @@ struct Mocks {
         ]
     ]
     
-    func index(_ resource: String, action: String) -> String {
-        let hasKey:Bool = mocks[resource] != nil
-        
-        guard hasKey else {
+    private static func index(_ resource: String, action: String) -> String? {
+        guard let book = mocks[resource] else {
             print("FAILED TO FIND KEY")
-            return ""
+            return nil
         }
-        
-        let book = mocks[resource]!
-        let hasAction:Bool = book[action] != nil
-        
-        guard hasAction else {
+        guard let action = book[action] else {
             print("FAILED TO FIND RESOURCE ACTION, PLEASE INCLUDE MOCK")
-            return ""
+            return nil
         }
-        
-        return book[action]!
+        return action
     }
     
-    func find(_ request: URLRequest ) -> AnyObject {
+    static func find(_ request: URLRequest ) -> Data? {
+        guard let parts = (request.url?.pathComponents),
+            let method = request.httpMethod,
+            let direction = MockDirection(rawValue: method)
+            else { return nil }
         
-        let parts:Array<String> = (request.url?.pathComponents)!
-        
-        let method:String = request.httpMethod!
-        
-        let direction:MockDirection = MockDirection(str: method)
-        
-        let suffix:[String] = parts.suffix(2).map{ i in return i}
-        
+        let suffix = parts.suffix(2).map{ i in return i}
         let actions = direction.kind(suffix)
+        guard let loadJSON = index(actions[0], action: actions[1]) else { return nil }
         
-        let loadJSON:String = index(actions[0], action: actions[1])
-        
-        return (loadJSON.data(using: String.Encoding.utf8) as NSData?)!
+        return loadJSON.data(using: String.Encoding.utf8)
     }
-    
 }

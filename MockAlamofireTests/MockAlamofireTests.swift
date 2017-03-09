@@ -11,7 +11,7 @@ import XCTest
 
 class MockAlamofireTests: XCTestCase {
    
-    var manager:RequestState = .Live
+    var manager:RequestState = .live
     
     override func setUp() {
         super.setUp()
@@ -40,7 +40,7 @@ class MockAlamofireTests: XCTestCase {
    
     func testMockRequest() {
         
-        manager = .Mock
+        manager = .mock
         
         let expect = expectation(description: "Get")
         
