@@ -15,11 +15,13 @@ class RequestManager {
     fileprivate let mockManager: SessionManager
     
     init(_ state: RequestState = .live) {
+        
         let configuration: URLSessionConfiguration = {
             let configuration = URLSessionConfiguration.default
             configuration.protocolClasses = [MockingURLProtocol.self]
             return configuration
         }()
+        
         self.liveManager = SessionManager.default
         self.mockManager = SessionManager(configuration: configuration)
     }
